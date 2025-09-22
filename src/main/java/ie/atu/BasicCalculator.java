@@ -7,16 +7,19 @@ public class BasicCalculator {
 
         Scanner scan = new Scanner(System.in);
 
+        //Get first num
         System.out.print("Please enter a number: ");
         double firstNum = scan.nextDouble();
         System.out.printf("You entered %s %n%n", firstNum);
 
+        //Get second num
         System.out.print("Please enter a second number: ");
         double secondNum = scan.nextDouble();
         System.out.printf("You entered %s %n%n", secondNum);
 
         scan.nextLine();
 
+        //Get operation
         System.out.print("Choose the operation (add, subtract, multiply, divide): ");
         String operation = scan.nextLine();
         while (!operation.equals("add") && !operation.equals("subtract") && !operation.equals("multiply") && !operation.equals("divide")) {
@@ -26,6 +29,7 @@ public class BasicCalculator {
         }
         System.out.printf("You entered %s %n%n", operation);
 
+        //Get result
         boolean isError = false;
         double result = switch (operation) {
             case "add" -> {
