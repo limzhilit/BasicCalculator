@@ -22,6 +22,8 @@ public class BasicCalculator {
         //Get operation
         System.out.print("Choose the operation (add, subtract, multiply, divide): ");
         String operation = scan.nextLine();
+
+        //check input
         while (!operation.equals("add") && !operation.equals("subtract") && !operation.equals("multiply") && !operation.equals("divide")) {
             System.out.print("Invalid input,");
             System.out.print(" choose the operation (add, subtract, multiply, divide): ");
@@ -53,6 +55,7 @@ public class BasicCalculator {
             }
         };
 
+        //print result
         if (isError) {
             System.out.print("Operation error\n");
             isError = false;
